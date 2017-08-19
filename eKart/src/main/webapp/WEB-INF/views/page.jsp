@@ -37,28 +37,38 @@
 
 	<div class="wrapper">
 		<!-- Navigation -->
-		<%@include file="./shared/navbar.jsp"%>
-
+		<%-- <%@include file="./shared/navbar.jsp"%> --%>
+		<c:import url="./shared/navbar.jsp"/>
 		<!-- Page Content -->
 		<div class="content">
 			<!-- Loading Home Page -->
 			<c:if test="${userClickHome == true}">
-				<%@include file="home.jsp"%>
+			<%-- <%@include file="home.jsp"%> --%>
+			<c:import url="home.jsp"/>
 			</c:if>
 
 			<!-- Loading About Page -->
 			<c:if test="${userClickAbout == true}">
-				<%@include file="about.jsp"%>
+			<%-- <%@include file="about.jsp"%> --%>
+			<c:import url="about.jsp"/>
 			</c:if>
 
 			<!-- Loading Contact Page -->
 			<c:if test="${userClickContact == true}">
-				<%@include file="contact.jsp"%>
+				<%-- <%@include file="contact.jsp"%> --%>
+				<c:import url="contact.jsp"/>
+			</c:if>
+			
+			<!-- Loading Contact Page -->
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+				<%-- <%@include file="contact.jsp"%> --%>
+				<c:import url="listProducts.jsp"/>
 			</c:if>
 		</div>
 
 		<!-- Footer -->
-		<%@include file="./shared/footer.jsp"%>
+		<%-- <%@include file="./shared/footer.jsp"%> --%>
+		<c:import url="./shared/footer.jsp"/>
 
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/jquery.js"></script>

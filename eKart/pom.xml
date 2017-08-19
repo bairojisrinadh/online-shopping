@@ -13,6 +13,12 @@
 		<spring.version>4.3.9.RELEASE</spring.version>
 	</properties>
 	<dependencies>
+		<!-- Link eKart Backend Project -->
+		<dependency>
+			<groupId>org.sri</groupId>
+			<artifactId>eKartBackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- JAVAEE API -->
 		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
 		<dependency>
@@ -29,7 +35,7 @@
 			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- JSTL DEPENDENCIES -->
 		<dependency>
 			<groupId>jstl</groupId>
